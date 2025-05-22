@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
@@ -17,10 +18,25 @@
 							<h1>Happy coding! 😊</h1>
 						</div>
 					</div>
+					<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+
+  <!-- Якщо потрібна навігація -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- Якщо потрібна пагінація -->
+  <div class="swiper-pagination"></div>
+</div>
 				</section>
 			</main>
 			@@include('./html/footer.html')
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="js/script.min.js"></script>
 	</body>
 </html>

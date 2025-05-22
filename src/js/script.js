@@ -1,9 +1,9 @@
-import Swiper from 'swiper';                // Імпорт Swiper.js
-import 'swiper/swiper-bundle.css';           // Імпорт стилів Swiper
+// import Swiper from 'swiper';                // Імпорт Swiper.js
+// import 'swiper/swiper-bundle.css';           // Імпорт стилів Swiper
 
 document.addEventListener('DOMContentLoaded', () => {
   // Ініціалізація Swiper після того, як DOM завантажено
-  const swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper', {
     direction: 'horizontal',  // напрямок слайдів
     loop: true,               // нескінченний цикл
     autoplay: {
