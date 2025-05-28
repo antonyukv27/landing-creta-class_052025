@@ -1,5 +1,13 @@
 @use './helpers/reset';
-@use './fonts';
-// @use './base';
+@use './helpers/abstracts' as *;
+@use './fonts' as *;
+@use './base';
 
-// @use './blocks/lerning_slider';
+
+// components
+@use './components/btn_prime';
+
+// blocks
+@use './blocks/footer';
+@use './blocks/hero';
+@use './blocks/learning_slider';
