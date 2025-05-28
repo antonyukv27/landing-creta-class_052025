@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 @mixin st_btn {
 	display: inline-flex;
 	justify-content: center;
@@ -10,35 +12,36 @@
 	text-decoration: none;
 }
 
-//color extends
-// %transp_btn_1 {
-// 	@include st_btn;
+// color extends
+%orange_btn_1 {
+	@include st_btn;
 
-// 	font-weight: 700;
-// 	color: $color_white;
-// 	background-color: transparent;
-// 	transition: 0.3s ease;
-// 	border: 2px solid $color_white;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $color_white;
+	transition: opacity $transition_dur ease;
+	background-image: linear-gradient(
+		93.93deg,
+		$color_orange 69.26%,
+		rgba(255, 123, 58, 0.59) 80.39%,
+		$color_orange 95.95%
+	);
+	
+	&:focus,
+	&:hover,
+	&:active {
+		opacity: 0.9;
+	}
+}
 
-// 	&:hover {
-// 		background-color: $color_white;
-// 		color: $color_black;
-// 	}
-// }
+// size extends
+%btn_size_1 {
+	min-width: 32.8rem;
+	height: 6.6rem;
+	padding: 0 2rem;
 
-//size extends
-// %btn_size_1 {
-// 	min-width: 23.2rem;
-// 	height: 5.4rem;
-// 	padding: 0 2rem;
+	line-height: 6.6rem;
+	font-size: 1.8rem;
 
-// 	line-height: 5.4rem;
-// 	font-size: 1.6rem;
-
-// 	border-radius: 2px;
-// }
-
-// .btn_white_1 {
-// 	@extend %white_btn_1;
-// 	@extend %btn_size_1;
-// }
+	border-radius: 1rem;
+}
