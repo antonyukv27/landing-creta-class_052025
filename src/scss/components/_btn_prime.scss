@@ -1,0 +1,6 @@
+@forward '../helpers/extends/buttons_extends';
+
+.btn_prime {
+	@extend %orange_btn_1;
+	@extend %btn_size_1;
+}

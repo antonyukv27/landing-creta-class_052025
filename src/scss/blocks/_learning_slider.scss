@@ -1,0 +1,70 @@
+@use '../helpers/variables';
+@use '../helpers/extends/icons_extends' as *;
+
+
+.learning_slider_block {
+	position: relative;
+
+	padding: 0 17rem;
+}
+
+.learning_slider__in {
+}
+
+.learning_slider__item {
+	padding: 3rem 3rem 7rem;
+	background-color: #fce4ec;
+	border-radius: 4rem;
+}
+
+.learning_slider__title {
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.25;
+}
+
+.learning_slider__btn {
+	@extend %arrow_left;
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: variables.$color_brown;
+	width: 3.6rem;
+	height: 2rem;
+	cursor: pointer;
+
+	&.learning_slider__btn--prev {
+		left: 0;
+	}
+	&.learning_slider__btn--next {
+		right: 0;
+		rotate: 180deg;
+		transform-origin: top;
+	}
+}
+
+// .learning_slider {
+
+// 	&__title {
+// 		font-weight: 800;
+// 		font-size: 2rem;
+// 		line-height: 1.25;
+// 	}
+
+// 	&__item {
+// 		padding: 3rem 3rem 7rem;
+// 		background-color: #fce4ec;
+// 		border-radius: 4rem;
+// 	}
+
+// 	&__btn {
+// 		position: absolute;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 		background-color: tomato;
+// 		width: 2rem;
+// 		height: 5rem;
+// 		cursor: pointer;
+// 	}
+// }
