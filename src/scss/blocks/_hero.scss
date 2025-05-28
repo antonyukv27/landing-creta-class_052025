@@ -1,0 +1,142 @@
+@use './helpers/abstracts' as *;
+
+.hero {
+	position: relative;
+	display: flex;
+	column-gap: 10rem;
+
+	&::before {
+		position: absolute;
+		top: 3rem;
+		left: -18rem;
+
+		content: '';
+
+		width: 33rem;
+		height: 22rem;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		
+		// background-image: url(../imgs/decor_plane.svg);
+		background-image: url("data:image/svg+xml,%3Csvg width='334' height='224' viewBox='0 0 334 224' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M277.49 12.4639L268.08 38.2321L281.79 23.0833L333.2 24.5526L277.49 12.4639Z' fill='%23002C44'/%3E%3Cpath d='M268.37 0.73999C268.37 0.73999 278.81 9.86984 277.39 12.7679L332.71 24.2587C332.7 24.2587 306.09 5.35051 268.37 0.73999Z' fill='%23FF7B3A'/%3E%3Cpath d='M267.66 38.7287C267.23 39.5494 288.63 36.5197 288.63 36.5197L281.29 22.7793C281.29 22.7793 271.45 31.5443 267.66 38.7287Z' fill='%23FBC949'/%3E%3Cpath d='M281.29 22.7792C281.29 22.7792 291.35 39.4582 285.72 49.1453L333.59 24.4714C333.59 24.4714 286.38 21.7963 281.29 22.7792Z' fill='%23F75E28'/%3E%3Cpath d='M2 167.438C2.82 195.132 26.39 220.383 53.67 222.268C80.95 224.153 107.88 201.961 111.15 174.45C111.96 167.611 111.36 160.274 107.62 154.519C103.88 148.763 96.4 145.156 90.01 147.537C82.81 150.212 79.65 159.636 82.06 167.013C84.48 174.39 91.13 179.659 98.28 182.476C113.43 188.444 131.91 184.441 143.32 172.707C156.16 159.494 159.03 139.755 163.88 121.88C174.51 82.6453 192.45 21.8776 250.98 27.2684' stroke='%23FBCD5F' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='8 8'/%3E%3C/svg%3E");
+	}
+}
+
+.hero__col {
+	width: calc(50% - 5rem);
+
+	&:first-child {
+		padding-top: 10rem;
+	}
+}
+
+.hero__title {
+	margin-bottom: 11.2rem;
+
+	font-weight: 700;
+	font-size: 6.4rem;
+	line-height: 7rem;
+}
+
+.hero_form {
+	display: block;
+}
+
+.hero_form__title {
+	margin-bottom: 3.2rem;
+
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.hero_form__radio_wrap {
+	margin-bottom: 3rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2.4rem;
+}
+
+.hero_form__radio {
+	@include st_btn;
+
+	position: relative;
+	height: 6rem;
+	min-width: 13rem;
+	padding: 2rem;
+
+	font-weight: 700;
+	font-size: 2.4rem;
+	border-width: 1.64px 1.64px 4.92px 1.64px;
+
+	border-style: solid;
+
+	border-color: rgba($color_black, 15%);
+	border-radius: 0.8rem;
+
+	&:has(.hero_form__radio_in:checked) {
+		background-color: $color_green;
+	}
+}
+
+.hero_form__radio_in {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+}
+
+.hero_form__submit_w {
+	margin-bottom: 2rem;
+}
+
+.hero_form__text {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.8rem;
+
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 1;
+
+	text-transform: capitalize;
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.hero_form__text_discont {
+	color: rgba($color_black, 75%);
+	strong {
+		color: $color_black;
+		font-size: 3.2rem;
+	}
+
+	span {
+		color: $color_green;
+	}
+}
+
+.hero_form__text_cta {
+	color: rgba($color_black, 50%);
+
+	span {
+		color: $color_orange;
+		text-transform: uppercase;
+	}
+}
+
+.hero__img_w {
+	width: 100%;
+	height: auto;
+}
+
+.hero__img {
+	@extend %contain_img;
+}
