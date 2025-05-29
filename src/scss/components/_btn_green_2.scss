@@ -1,0 +1,6 @@
+@forward '../helpers/extends/buttons_extends';
+
+.btn_green_2 {
+	@extend %green_btn_2;
+	@extend %btn_size_3;
+}
