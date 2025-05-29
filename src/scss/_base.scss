@@ -70,7 +70,7 @@ body {
 
 .logo {
 	display: block;
-	width: 260rem;
+	width: 26rem;
 	height: 5.4rem;
 }
 
@@ -78,35 +78,3 @@ body {
 	@extend %contain_img
 }
 
-/* remove */
-
-header {
-	padding: 30px 6px;
-	display: flex;
-	align-items: center;
-	min-height: 120px;
-	font-size: 50px;
-	text-align: center;
-	justify-content: center;
-	background-color: #ccc;
-
-	// @include bp($point_2, min) {
-	// 	background-color: tomato;
-	// }
-}
-
-.header {
-	font-size: 50px;
-}
-
-.header__in {
-	color: tomato;
-
-	font-size: 2em;
-}
-
-h1 {
-	font-weight: normal;
-}
-
-/* remove */
