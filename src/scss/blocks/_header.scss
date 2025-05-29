@@ -1,4 +1,42 @@
 @use './helpers/abstracts' as *;
 .header {
-    box-shadow: box-shadow: 0px 1rem 5rem 0rem #0000000D;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z_index_header;
+
+	height: 12rem;
+	display: flex;
+	align-items: center;
+	width: 100%;
+
+	background-color: $color_white;
+	box-shadow: 0px 1rem 5rem 0px #0000000d;
+	transition: all $transition_dur ease-in-out;
+
+	&.on_scroll {
+		height: 8rem;
+	}
 }
+
+.header__in {
+	display: flex;
+	align-items: center;
+	column-gap: 4.8rem;
+}
+
+.header__cta_btn {
+	margin-left: auto;
+}
+
+.header_nav {
+	@include bp($point_2, min) {
+		display: flex;
+		column-gap: 2.8rem;
+	}
+
+	@include bp($point_3) {
+		display: none;
+	}
+}
+
