@@ -14,3 +14,15 @@ const swiper = new Swiper('.swiper', {
 		clickable: true,
 	},
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+		const header = document.querySelector(".header");
+
+		window.addEventListener("scroll", function () {
+			if (window.scrollY > 50) {
+				header.classList.add("on_scroll");
+			} else {
+				header.classList.remove("on_scroll");
+			}
+		});
+	});
