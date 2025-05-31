@@ -1,6 +1,7 @@
 @use './helpers/abstracts' as *;
 
 .hero {
+	margin-top: 15rem;
 	position: relative;
 	display: flex;
 	column-gap: 10rem;
