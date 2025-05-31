@@ -1,6 +1,17 @@
 @use '../helpers/variables';
 @use '../helpers/extends/icons_extends' as *;
 
+.section__descr {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.section__head {
+    margin-bottom: 4rem;
+    text-align: center;
+}
 
 .learning_slider_block {
 	position: relative;
@@ -44,27 +55,27 @@
 	}
 }
 
-// .learning_slider {
+.learning_slider {
 
-// 	&__title {
-// 		font-weight: 800;
-// 		font-size: 2rem;
-// 		line-height: 1.25;
-// 	}
+	&__title {
+		font-weight: 800;
+		font-size: 2rem;
+		line-height: 1.25;
+	}
 
-// 	&__item {
-// 		padding: 3rem 3rem 7rem;
-// 		background-color: #fce4ec;
-// 		border-radius: 4rem;
-// 	}
+	&__item {
+		padding: 3rem 3rem 7rem;
+		background-color: #fce4ec;
+		border-radius: 4rem;
+	}
 
-// 	&__btn {
-// 		position: absolute;
-// 		top: 50%;
-// 		transform: translateY(-50%);
-// 		background-color: tomato;
-// 		width: 2rem;
-// 		height: 5rem;
-// 		cursor: pointer;
-// 	}
-// }
+	&__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: tomato;
+		width: 2rem;
+		height: 5rem;
+		cursor: pointer;
+	}
+}
