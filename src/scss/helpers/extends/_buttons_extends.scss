@@ -62,8 +62,8 @@
 	&:active,
 	&:focus {
 		color: $color_white;
-		background-color: $color_green_2;
-		border-color: $color_green_2;
+		background-color: $color_green;
+		border-color: $color_green;
 
 		&::after {
 			background-color: $color_white;
