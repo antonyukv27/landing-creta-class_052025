@@ -1,81 +1,175 @@
-@use '../helpers/variables';
+@use '../helpers/variables' as *;
 @use '../helpers/extends/icons_extends' as *;
 
-.section__descr {
-	font-family: Inter;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 20px;
+.section__head {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
-.section__head {
-    margin-bottom: 4rem;
-    text-align: center;
+.section__descr {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .learning_slider_block {
-	position: relative;
-
-	padding: 0 17rem;
-}
-
-.learning_slider__in {
+  position: relative;
+  padding: 0 17rem;
 }
 
 .learning_slider__item {
-	padding: 3rem 3rem 7rem;
-	background-color: #fce4ec;
-	border-radius: 4rem;
+  &.learning_slider__item--v2 {
+    background-color: #fff0cb;
+  }
+  &.learning_slider__item--v3 {
+    background-color: #ebf2ff;
+  }
 }
 
-.learning_slider__title {
-	font-weight: 700;
-	font-size: 2rem;
-	line-height: 1.25;
+.learning_slider__list_item {
+  position: relative;
+  padding-left: 2.4rem;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.6rem;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor; // дозволяє змінювати колір через color
+  }
+}
+
+// Кольори задаємо через модифікатори (по кольорових списках)
+.learning_slider__list--pink .learning_slider__list_item {
+  color: #BD6E89;
+}
+
+.learning_slider__list--beige .learning_slider__list_item {
+  color: #A58639;
+}
+
+.learning_slider__list--blue .learning_slider__list_item {
+  color: #28529F;
+}
+
+.learning_slider__list {
+  font-family: $font_3;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.25;
+  color: #bd6e89;
+
+  li {
+    position: relative; // щоб ::before позиціювався відносно li
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0.6rem;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 0;
+      background-color: #ccc;
+    }
+  }
+
+  &--pink {
+    li {
+      color: #BD6E89;
+      &::before {
+        background-color: #FF96B9;
+      }
+    }
+  }
+
+  &--beige {
+    li {
+      color: #A58639;
+      &::before {
+        background-color: #D8AF4A;
+      }
+    }
+  }
+
+  &--blue {
+    li {
+      color: #28529F;
+      &::before {
+        background-color: #789BDC;
+      }
+    }
+  }
+}
+
+.learning_slider__title_wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.learning_slider__img {
+  width: 9.4rem;
+  height: 8.8rem;
 }
 
 .learning_slider__btn {
-	@extend %arrow_left;
+  @extend %arrow_left;
 
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color: variables.$color_brown;
-	width: 3.6rem;
-	height: 2rem;
-	cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color_brown;
+  width: 3.6rem;
+  height: 2rem;
+  cursor: pointer;
 
-	&.learning_slider__btn--prev {
-		left: 0;
-	}
-	&.learning_slider__btn--next {
-		right: 0;
-		rotate: 180deg;
-		transform-origin: top;
-	}
+  &.learning_slider__btn--prev {
+    left: 0;
+  }
+  &.learning_slider__btn--next {
+    right: 0;
+    rotate: 180deg;
+    transform-origin: top;
+  }
 }
 
 .learning_slider {
+  &__title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
 
-	&__title {
-		font-weight: 800;
-		font-size: 2rem;
-		line-height: 1.25;
-	}
+  &__item {
+    padding: 3rem 3rem 7rem;
+    background-color: #fce4ec;
+    border-radius: 4rem;
+    height: auto;
+  }
 
-	&__item {
-		padding: 3rem 3rem 7rem;
-		background-color: #fce4ec;
-		border-radius: 4rem;
-	}
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: tomato;
+    width: 2rem;
+    height: 5rem;
+    cursor: pointer;
+  }
 
-	&__btn {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background-color: tomato;
-		width: 2rem;
-		height: 5rem;
-		cursor: pointer;
-	}
+  &__pag {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 2rem;
+    max-width: 11rem;
+    margin: 3.8rem auto 0;
+  }
 }
